@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #a1997e;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.resultsController">
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="395.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="172.0" layoutY="45.0" text="Results">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="mainMenuButton" layoutX="135.0" layoutY="317.0" mnemonicParsing="false" onAction="#returnToMainMenu" prefHeight="32.0" prefWidth="143.0" text="Back to Main Menu" />
+            <Label layoutX="71.0" layoutY="117.0" text="GPU:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="72.0" layoutY="170.0" text="CPU:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="GPULabel" layoutX="160.0" layoutY="117.0" text="GPULabel">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="CPULabel" layoutX="158.0" layoutY="170.0" text="CPULabel">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="72.0" layoutY="226.0" text="Power Consumption:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="wattsLabel" layoutX="294.0" layoutY="226.0" text="W">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="GPULink" layoutX="284.0" layoutY="113.0" onAction="#openGPULink" text="Prices">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="CPULink" layoutX="284.0" layoutY="166.0" onAction="#openCPULink" text="Prices">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="benchmarkLink" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="264.0" maxHeight="38.0" maxWidth="282.0" minHeight="38.0" minWidth="282.0" onAction="#openBenchmark" prefHeight="38.0" prefWidth="282.0" text="Benchmarks">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </AnchorPane>
+   </right>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="199.0" fitWidth="177.0" layoutX="26.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/pcgraphic.PNG" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
