@@ -7,24 +7,35 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #a1997e;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ChoosePriceController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #abb6b8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ChoosePriceController">
    <right>
       <AnchorPane prefHeight="400.0" prefWidth="395.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="105.0" layoutY="109.0" text="Price Range?">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9a4848" height="256.0" layoutX="143.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="264.0" />
+            <Ellipse fill="#9a4848" layoutX="148.0" layoutY="200.0" radiusX="100.0" radiusY="128.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="256.0" layoutX="133.0" layoutY="57.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="274.0" />
+            <Ellipse fill="WHITE" layoutX="133.0" layoutY="185.0" radiusX="100.0" radiusY="128.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <TextField fx:id="priceInput" layoutX="148.0" layoutY="175.0" promptText="Price in Dollars" />
+            <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="328.0" prefHeight="70.0" prefWidth="248.0" text="Please Enter an Amount of at least $500" textAlignment="CENTER" textFill="#da0000" wrapText="true">
                <font>
-                  <Font name="System Bold" size="39.0" />
+                  <Font size="20.0" />
                </font>
             </Label>
-            <Button fx:id="findPCButton" layoutX="178.0" layoutY="214.0" mnemonicParsing="false" onAction="#searchForPC" prefHeight="32.0" prefWidth="88.0" text="Find PC" />
-            <TextField fx:id="priceInput" layoutX="148.0" layoutY="175.0" promptText="Price in Dollars" />
-            <Label layoutX="136.0" layoutY="173.0" text="\$">
+            <Label layoutX="137.0" layoutY="173.0" text="\$">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
+            <Label layoutX="118.0" layoutY="117.0" text="PC Budget?">
+               <font>
+                  <Font name="System Bold" size="39.0" />
+               </font>
+            </Label>
+            <Button fx:id="findPCButton" defaultButton="true" layoutX="178.0" layoutY="214.0" mnemonicParsing="false" onAction="#searchForPC" prefHeight="32.0" prefWidth="88.0" style="-fx-background-color: #9a4848;" text="Ideal PC" textFill="WHITE" />
          </children>
       </AnchorPane>
    </right>
@@ -33,7 +44,7 @@
          <children>
             <ImageView fitHeight="199.0" fitWidth="177.0" layoutX="26.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../img/pcgraphic.PNG" />
+                  <Image url="@../../img/pctransparent.png" />
                </image>
             </ImageView>
          </children>

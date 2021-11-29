@@ -8,7 +8,9 @@ public class PricePartPicker extends ChoosePriceController {
 	String[][] gpuList = GPUARRAY.returnArray();
 	public String[] getGPU(int price) {
 		int gpuLevel;
-		if (price <= 1000) {
+		if (price < 500) {
+			gpuLevel = -1;
+		} else if (price <= 1000) {
 			gpuLevel = 0;
 		} else if (price <= 1500) {
 			gpuLevel = 1;
@@ -20,8 +22,10 @@ public class PricePartPicker extends ChoosePriceController {
 	
 	public String[] getCPU(int price) {
 		int cpuLevel;
-		if (price <= 1000) {
-			cpuLevel = 0;
+		if (price < 500) {
+			cpuLevel = -1;
+		} else if (price <= 1000) {
+			cpuLevel = 0; 
 		} else if (price <= 1500) {
 			cpuLevel = 1;
 		} else {
