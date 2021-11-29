@@ -26,11 +26,15 @@ public class resultsController {
 	@FXML
 	private Label wattsLabel;
 	@FXML
+	private Label RAMLabel;
+	@FXML
 	private Hyperlink GPULink;
 	@FXML
 	private Hyperlink CPULink;
 	@FXML
 	private Hyperlink benchmarkLink;
+	@FXML
+	private Hyperlink RAMLink;
 	
 	String gameName = "";
 	
@@ -66,10 +70,17 @@ public class resultsController {
 		Desktop.getDesktop().browse(new URI(CPUURL));
 	}
 	
+	public void openRAMLink(ActionEvent event) throws IOException, URISyntaxException { 
+		String RAMURL = "https://pricespy.co.nz/search?search=" + RAMLabel.getText();
+		RAMURL = RAMURL.replaceAll(" ", "_");
+		Desktop.getDesktop().browse(new URI(RAMURL));
+	}
+	
 	public void getGame(String game) {
 		gameName = game;
 		benchmarkLink.setText(game + " Benchmarks");
 	}
+	
 	public void openBenchmark(ActionEvent event) throws IOException, URISyntaxException {
 		String benchmarkURL = "https://www.youtube.com/results?search_query=" + CPULabel.getText() + "+" + GPULabel.getText() + "+" + gameName + "+Benchmarks";
 		benchmarkURL = benchmarkURL.replaceAll(" ", "+");

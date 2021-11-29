@@ -7,13 +7,16 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #a1997e;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.resultsController">
    <right>
       <AnchorPane prefHeight="400.0" prefWidth="395.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="172.0" layoutY="45.0" text="Results">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#757575" height="351.0" layoutX="14.0" layoutY="37.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="343.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="347.0" layoutX="28.0" layoutY="27.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="340.0" />
+            <Label layoutX="156.0" layoutY="46.0" text="Results">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -24,17 +27,17 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="72.0" layoutY="170.0" text="CPU:">
+            <Label layoutX="72.0" layoutY="147.0" text="CPU:">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="GPULabel" layoutX="160.0" layoutY="117.0" text="GPULabel">
+            <Label fx:id="GPULabel" layoutX="152.0" layoutY="117.0" text="GPULabel">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="CPULabel" layoutX="158.0" layoutY="170.0" text="CPULabel">
+            <Label fx:id="CPULabel" layoutX="153.0" layoutY="147.0" text="CPULabel">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -44,7 +47,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="wattsLabel" layoutX="294.0" layoutY="226.0" text="W">
+            <Label fx:id="wattsLabel" layoutX="284.0" layoutY="226.0" text="W">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -54,12 +57,27 @@
                   <Font size="20.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="CPULink" layoutX="284.0" layoutY="166.0" onAction="#openCPULink" text="Prices">
+            <Hyperlink fx:id="CPULink" layoutX="284.0" layoutY="143.0" onAction="#openCPULink" text="Prices">
                <font>
                   <Font size="20.0" />
                </font>
             </Hyperlink>
             <Hyperlink fx:id="benchmarkLink" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="264.0" maxHeight="38.0" maxWidth="282.0" minHeight="38.0" minWidth="282.0" onAction="#openBenchmark" prefHeight="38.0" prefWidth="282.0" text="Benchmarks">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Hyperlink>
+            <Label layoutX="72.0" layoutY="177.0" text="RAM:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="RAMLabel" layoutX="149.0" layoutY="177.0" text="16 GB DDR4">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="RAMLink" layoutX="284.0" layoutY="173.0" onAction="#openRAMLink" text="Prices">
                <font>
                   <Font size="20.0" />
                </font>
