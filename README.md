@@ -1,4 +1,8 @@
 # PartPicker
+
+Before running the launcher, open it in a text editing software and enter your JavaFX path 
+________________________________________________________________________________________________
+
 Application to pick PC parts for novice PC builders 
 
 Users can choose to find their ideal PC parts based on either a game they want to play, or their budget that they are willing to spend.
