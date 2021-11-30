@@ -18,7 +18,7 @@ public class CPUARRAY extends Main{
 
 		String[] i7 = new String[2];
 		i7[0] = "i7 10700F";
-		i7[1] = "60";
+		i7[1] = "65";
 		CPU[2] = i7; 
 		
 	}
